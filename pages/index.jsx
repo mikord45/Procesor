@@ -13,7 +13,7 @@ const Home = () => {
     MOV: {
       action: (registersCopy, dst, src) => {
         registersCopy[dst] = registersCopy[src];
-        registersCopy[src] = "";
+        // registersCopy[src] = "";
         return registersCopy;
       }
     },
@@ -92,19 +92,19 @@ const Home = () => {
           <div className='w-1/3'>
             <label>
               BX
-              <input className='w-full' type="text" name="BX" maxLength="2" value={registers.BX} onChange={(event) => handleChange(event)} />
+              <input className='w-full' type="text" name="BX" maxLength="4" value={registers.BX} onChange={(event) => handleChange(event)} />
             </label>
           </div>
           <div className='w-1/3'>
             <label>
               CX
-              <input className='w-full' type="text" name="CX" maxLength="2" value={registers.CX} onChange={(event) => handleChange(event)} />
+              <input className='w-full' type="text" name="CX" maxLength="4" value={registers.CX} onChange={(event) => handleChange(event)} />
             </label>
           </div>
           <div className='w-1/3'>
             <label >
               DX
-              <input className='w-full' type="text" name="DX" maxLength="2" value={registers.DX} onChange={(event) => handleChange(event)} />
+              <input className='w-full' type="text" name="DX" maxLength="4" value={registers.DX} onChange={(event) => handleChange(event)} />
             </label>
           </div>
         </div>
