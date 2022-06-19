@@ -77,30 +77,34 @@ const Home = () => {
         <title>Symulator</title>
       </Head>
       <div className="text-center py-8 text-3xl">
-        Projekt zaliczeniowy Mikołaj Stryczek
+        Projekt zaliczeniowy - Symulator Procesora - Mikołaj Stryczek 14007
       </div>
       <div className="flex flex-row-reverse">
-        <div className='flex flex-col w-1/2 gap-4 m-4 items-start justify-center'>
-          <div className="flex gap-4">
-            <button className="btn" onClick={() => random()}>random</button>
-            <button className="btn" onClick={() => reset()}>reset</button>
-          </div>
-          <div className="flex flex-col gap-4">
+        <div className="flex flex-col w-1/2 gap-4 m-4 ml-6 items-start">
+          <button className="btn w-1/3" onClick={() => random()}>random</button>
+          <button className="btn w-1/3" onClick={() => reset()}>reset</button>
+          <div className='w-1/3'>
             <label>
               AX
-              <input type="text" name="AX" maxLength="4" value={registers.AX} onChange={(event) => handleChange(event)} />
+              <input className='w-full' type="text" name="AX" maxLength="4" value={registers.AX} onChange={(event) => handleChange(event)} />
             </label>
+          </div>
+          <div className='w-1/3'>
             <label>
               BX
-              <input type="text" name="BX" maxLength="2" value={registers.BX} onChange={(event) => handleChange(event)} />
+              <input className='w-full' type="text" name="BX" maxLength="2" value={registers.BX} onChange={(event) => handleChange(event)} />
             </label>
+          </div>
+          <div className='w-1/3'>
             <label>
               CX
-              <input type="text" name="CX" maxLength="2" value={registers.CX} onChange={(event) => handleChange(event)} />
+              <input className='w-full' type="text" name="CX" maxLength="2" value={registers.CX} onChange={(event) => handleChange(event)} />
             </label>
-            <label>
+          </div>
+          <div className='w-1/3'>
+            <label >
               DX
-              <input type="text" name="DX" maxLength="2" value={registers.DX} onChange={(event) => handleChange(event)} />
+              <input className='w-full' type="text" name="DX" maxLength="2" value={registers.DX} onChange={(event) => handleChange(event)} />
             </label>
           </div>
         </div>
@@ -112,6 +116,8 @@ const Home = () => {
             <Button order="MOV" dst="BX" src="AX" onClick={(event) => handleClick(event)} />
             <Button order="MOV" dst="BX" src="CX" onClick={(event) => handleClick(event)} />
             <Button order="MOV" dst="BX" src="DX" onClick={(event) => handleClick(event)} />
+          </div>
+          <div className='flex flex-col w-1/4 gap-4'>
             <Button order="MOV" dst="CX" src="AX" onClick={(event) => handleClick(event)} />
             <Button order="MOV" dst="CX" src="BX" onClick={(event) => handleClick(event)} />
             <Button order="MOV" dst="CX" src="DX" onClick={(event) => handleClick(event)} />
@@ -126,6 +132,8 @@ const Home = () => {
             <Button order="XCHG" dst="BX" src="AX" onClick={(event) => handleClick(event)} />
             <Button order="XCHG" dst="BX" src="CX" onClick={(event) => handleClick(event)} />
             <Button order="XCHG" dst="BX" src="DX" onClick={(event) => handleClick(event)} />
+          </div>
+          <div className='flex flex-col w-1/4 gap-4'>
             <Button order="XCHG" dst="CX" src="AX" onClick={(event) => handleClick(event)} />
             <Button order="XCHG" dst="CX" src="BX" onClick={(event) => handleClick(event)} />
             <Button order="XCHG" dst="CX" src="DX" onClick={(event) => handleClick(event)} />
