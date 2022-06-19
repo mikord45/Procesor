@@ -13,7 +13,6 @@ const Home = () => {
     MOV: {
       action: (registersCopy, dst, src) => {
         registersCopy[dst] = registersCopy[src];
-        // registersCopy[src] = "";
         return registersCopy;
       }
     },
